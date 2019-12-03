@@ -151,3 +151,27 @@ let parentElement = document.querySelector('nav');
 parentElement.appendChild(newNav1);
 parentElement.prepend(newNav2);
 
+let newButton = document.createElement('button');
+
+newButton.textContent = "Change Some Stuff";
+newButton.style.color = 'white';
+newButton.style.backgroundColor = "green";
+newButton.style.border = '2px outset grey';
+newButton.style.borderRadius = '25px';
+newButton.style.margin = '5px';
+
+let btnParent = document.querySelector('body');
+
+btnParent.prepend(newButton);
+
+newButton.addEventListener('click', changeButton);
+
+function changeButton() {
+  newButton.style.color = 'green';
+  newButton.style.backgroundColor = 'white';
+  newButton.style.fontSize = '1.25rem';
+  title.style.color = 'darkgreen';
+  button.style.color = 'white';
+  button.style.backgroundColor = 'green';
+  button.style.borderRadius = '25px';
+}
