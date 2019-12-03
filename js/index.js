@@ -45,6 +45,7 @@ let navLinks = document.querySelectorAll('a');
 
 navLinks.forEach((link, index) => {
   link.textContent = siteContent.nav[`nav-item-${index+1}`];
+  link.style.color = 'green';
 })
 
 let mainImg = document.querySelector('#cta-img');
@@ -108,6 +109,7 @@ paragraphs[4].textContent = siteContent['main-content']['vision-content'];
 paragraphs[5].textContent = siteContent['contact']['address'];
 paragraphs[6].textContent = siteContent['contact']['phone'];
 paragraphs[7].textContent = siteContent['contact']['email'];
+paragraphs[8].textContent = siteContent['footer']['copyright'];
 // let topText = document.querySelectorAll('.top-content > .text-content')
 // console.log(topText);
 
@@ -136,5 +138,16 @@ paragraphs[7].textContent = siteContent['contact']['email'];
 
 // aboutText.textContent = siteContent['main-content']['about-content'];
 
+let newNav1 = document.createElement('a');
+let newNav2 = document.createElement('a');
 
+newNav1.textContent = "Links";
+newNav1.style.color = 'green';
+newNav2.textContent = "Home";
+newNav2.style.color = 'green';
+
+let parentElement = document.querySelector('nav');
+
+parentElement.appendChild(newNav1);
+parentElement.prepend(newNav2);
 
